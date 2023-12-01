@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-image: linear-gradient(to right, #B721FF, #45A8FD); */
+    background-color: #E6E6E6;
+}
+
+.nav-container {
+    width: 100%;
+    margin: auto;
+    background-color: #3099FB;
+}
+
+.nav-container #main-nav {
+    width: 100%;
+    margin: auto;
+    padding: 10px 15px;
+}
+
+#main-nav .main-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+#main-nav .main-nav-container .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-nav .main-nav-container .logo img {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+#main-nav .main-nav-container .logo span {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    color: #ffffff;
+}
+
+/* PENETRATION TESTING SECTION */
+
+#main-nav .main-nav-container #nav-links {
+    width: 30%;
+}
+
+#main-nav .main-nav-container #nav-links .nav-links-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main-nav .main-nav-container #nav-links a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+#main-nav .main-nav-container #nav-links a:hover {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#main-nav .main-nav-container #nav-links a#logout {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 11.5px;
+}
+
+#main-nav .main-nav-container #nav-links a#logout:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.chat-box {
+    max-width: 600px;
+    margin: 70px auto 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 3px 5px 8px 1px #0A0A0A;    
+}
+
+.chat-header {
+    background-color: #3099FB;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.chat-messages {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    background-color: #f9f9f9;
+}
+
+.message {
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Center the content vertically */
+}
+
+.message p {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    max-width: 60%; /* Adjusted max-width for a more compact layout */
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.other-message {
+    justify-content: flex-start;
+}
+
+.user-message .fa-user-circle {
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.other-message .fa-user-circle {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.input-box {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    width: 70%;
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#messageSent {
+    padding: 8px;
+    background-color: #2081FB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.emoji-picker {
+    display: inline;
+    position: absolute;
+    top: 430px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    display: none;
+}
+
+.emoji-picker img {
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.file-icon {
+    font-size: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+.items{
+    margin-right: 8px;
+}
+
+.footer-container {
+    background-color: #ffffff;
+    color: #000000;
+    width: 100%;
+    margin: 100px auto 0 auto;
+    font-family: Helvetica, Georgia, "Times New Roman";
+    font-size: 16px;
+}
+
+.footer-container a {
+    text-decoration: none;
+    color: initial;
+}
+
+.footer-container #main-footer {
+    width: 100%;
+    margin: auto;
+}
+
+#main-footer .footer-content {
+    padding: 8px 15px;
+}
+
+#main-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content .left-aside {
+    padding: 8px 15px;
+    margin-right: 15px;
+}
+
+.footer-content .left-aside .logo img {
+    width: 15%;
+    height: 15%;
+    margin: 15px auto 15px auto;
+    display: block;
+}
+
+.footer-content .left-aside .logo p {
+    width: 100%;
+    margin: 8PX auto 12px auto;
+    text-align: center;
+    font-size: 15px;
+}
+
+.footer-content .left-aside .soc-meds {
+    text-align: center;
+}
+
+.footer-content .left-aside .soc-meds i {
+    margin-right: 5px;
+    font-size: 22px;
+    color: #2081FB;
+}
+
+.footer-content .left-aside,
+.footer-content .quick-link,
+.footer-content .services,
+.footer-content .help-support {
+    width: 25%;
+    margin: auto;
+    /* background-color: #E6E6E6; */
+}
+
+.footer-content .quick-link h2,
+.footer-content .services h2,
+.footer-content .help-support h2 {
+    margin-bottom: 20px;
+    color: gray;
+    font-size: 18px;
+}
+
+.footer-content .quick-link a,
+.footer-content .left-aside a,
+.footer-content .services a,
+.footer-content .help-support a {
+    display: block;
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 12px;
+}
+
+.footer-content .quick-link a:hover,
+.footer-content .left-aside a:hover,
+.footer-content .services a:hover,
+.footer-content .help-support a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+hr.thematic {
+    background-color: #000000;
+    margin-bottom: 15px;
+}
+
+.bottom {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.bottom p {
+    font-size: 13.5px;
+    color: gray;
+}
+
+@media screen and (max-width: 768px) {
+
+    .footer-content .left-aside .logo img {
+        width: 15%;
+        height: 15px;
+        margin: auto;
+        display: block;
+    }    
+    
+    .footer-content .left-aside {
+        width: 100%;
+        margin: auto;
+        
+    }
+
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongo | Chat Application</title>
+    <meta name="author" content="Secret Group">
+    <meta name="keywords" content="Mongo-Mongo Chat Applications">
+    <meta name="description" content="Chat Applications, Mongo-Mongo Chat App">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/landing/index.css">
+</head>
+<body>
+    <div class="nav-container">
+        <nav id="main-nav">
+            <div class="main-nav-container">
+                <div class="logo">
+                    <img src="mongo-logo.png" alt="Mongo-Mongo Logo" width="35" height="35">
+                    <span>Mongo-Mongo</span>
+                </div>
+                <nav id="nav-links">
+                    <div class="nav-links-container">
+                        <a href="/landing">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/chats">Message</a>
+                        <!-- <button type="button" id="logout" name="logout"></button> -->
+                        <a href="/" id="logout" onclick="logout()">Logout</a>
+                    </div>
+                </nav>
+            </div>
+        </nav><!-- End of main-nav -->
+    </div>
+    <div class="section-container">
+        <section id="main-section">
+            <div class="description">
+                <h1>Mongo-Mongo</h1>
+                <h2>Chat Application</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.</p>
+            </div>
+            <div class="buttons">
+                <button type="button" id="Try-now" name="Try-now">Try Now</button>
+                <button type="button" id="contact-us" name="contact-us">Contact Us</button>
+            </div>
+        </section>
+    </div>
+    <script>
+    function logout(){
+        localStorage.clear();
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongo | Chat Application</title>
+    <meta name="author" content="Secret Group">
+    <meta name="keywords" content="Mongo-Mongo Chat Applications">
+    <meta name="description" content="Chat Applications, Mongo-Mongo Chat App">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/chats/index.css">
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="nav-container">
+        <nav id="main-nav">
+            <div class="main-nav-container">
+                <div class="logo">
+                    <img src="/Images/mongo-logo.png" alt="Mongo-Mongo Logo" width="35" height="35">
+                    <span>Mongo-Mongo</span>
+                </div>
+                <nav id="nav-links">
+                    <div class="nav-links-container">
+                        <a href="/landing">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/chats">Message</a>
+                        <!-- <button type="button" id="logout" name="logout"></button> -->
+                        <a href="/" id="logout" onclick="logout()">Logout</a>
+                    </div>
+                </nav>
+            </div>
+        </nav><!-- End of main-nav -->
+    </div>
+    <div class="chat-box">
+        <div class="chat-header">
+            <h2>Mongo Group</h2>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message user-message">
+            </div>
+            <div class="message other-message">
+            </div>
+            <!-- Add more messages here -->
+        </div>
+        <div class="input-box">
+            <div class="items">
+                <label for="file-input" class="file-icon">
+                    <i class="fas fa-file"></i>
+                </label>
+                <input type="file" id="file-input" style="display: none;">
+                <span class="emoji-icon" onclick="toggleEmojiPicker()">
+                    <i class="far fa-smile"></i>
+                </span>
+            </div>
+            <div class="emoji-picker" id="emojiPicker">
+                <i class="fa-solid fa-heart" onclick="insertEmoji('❤️')" style="color: red"></i>
+                <i class="fa-solid fa-face-smile" onclick="insertEmoji('😄')" style="color:orange"></i>
+                <i class="fa-solid fa-face-surprise" onclick="insertEmoji('😲')" style="color: orange"></i>
+                <i class="fa-solid fa-face-sad-tear" onclick="insertEmoji('😢')" style="color: orange"></i>
+                <i class="fa-solid fa-face-angry" onclick="insertEmoji('😡')" style="color: red"></i>
+            </div>
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <i class="fa-regular fa-paper-plane" onclick="sendMessage()" id="messageSent"></i>
+        </div>
+    </div>
+    <script src="/chats/script.js"></script>
+</body>
+</html>
