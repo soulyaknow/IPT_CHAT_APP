@@ -2,6 +2,15 @@ const express = require("express");
 const http = require("http");
 const jwt = require("jsonwebtoken");
 
+const mysql = require("mysql2");
+
+const con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "chat_db"
+});
+
 const app = express();
 const server = http.createServer(app);
 

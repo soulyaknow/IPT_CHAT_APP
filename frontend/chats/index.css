@@ -116,6 +116,10 @@ body {
     background-color: #f9f9f9;
 }
 
+.chat-messages::-webkit-scrollbar {
+    display: none;
+  }
+
 .message {
     margin-bottom: 10px;
     overflow: hidden;
@@ -138,6 +142,19 @@ body {
 
 .other-message {
     justify-content: flex-start;
+}
+
+.other-message p span {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 9px;
+}
+
+.other-message img#user-profile {
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 22px;
 }
 
 .user-message .fa-user-circle {
@@ -211,12 +228,13 @@ input[type="file"] {
 }
 
 .footer-container {
-    background-color: #ffffff;
+    background-color: #E6E6E6;
     color: #000000;
     width: 100%;
-    margin: 100px auto 0 auto;
+    margin: 120px auto 0 auto;
     font-family: Helvetica, Georgia, "Times New Roman";
     font-size: 16px;
+    border-top: 1px solid gray;
 }
 
 .footer-container a {
@@ -226,7 +244,7 @@ input[type="file"] {
 
 .footer-container #main-footer {
     width: 100%;
-    margin: auto;
+    margin: auto auto 0 auto;
 }
 
 #main-footer .footer-content {
@@ -310,7 +328,6 @@ hr.thematic {
 
 .bottom {
     text-align: center;
-    margin-bottom: 15px;
 }
 
 .bottom p {

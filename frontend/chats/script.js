@@ -20,7 +20,7 @@
             
             var userMessage = document.createElement("div");
             userMessage.className = "message user-message";
-            userMessage.innerHTML = '<p>' + messageText + '</p><i class="fas fa-user-circle"></i><h6>' + name + '</h6>';
+            userMessage.innerHTML = '<p>' + messageText + '</p>';
 
             chatMessages.appendChild(userMessage);
             messageInput.value = "";
@@ -37,22 +37,20 @@
             }
         })
         .then((response) => {
-            console.log(response);
             return response.json();
         })
         .then((data) => {
             const chatMessages = document.getElementById('chat-messages');
-
             data.forEach((messageObj) => {
 
                 const currentUserID = parseInt(localStorage.getItem('userid'));
                 const messageElement = document.createElement('div');
-                if(messageObj.userid == currentUserID){
+                if(messageObj.userid === currentUserID){
                     messageElement.className = "message user-message";
-                    messageElement.innerHTML = `<p>${messageObj.message}</p><i class="fas fa-user-circle"></i><h6>'${messageObj.username}</h6>`;
+                    messageElement.innerHTML = `<p>${messageObj.message}</p>`;
                 }else{              
                     messageElement.className = 'message other-message';
-                    messageElement.innerHTML = `<p><i class="fas fa-user-circle"></i> ${messageObj.username}: ${messageObj.message}</p>`;
+                    messageElement.innerHTML = `<img src="/Images/user-profile3.png" width="25" height="25" id="user-profile"><p><span>${messageObj.username}</span>  ${messageObj.message}</p>`;
                 }
                 chatMessages.appendChild(messageElement);
             });
